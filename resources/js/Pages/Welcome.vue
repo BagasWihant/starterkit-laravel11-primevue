@@ -89,6 +89,7 @@ const loadLazyData = (event) => {
     lazyParams.value = { ...lazyParams.value, first: event?.first || first.value };
 
     CustomerService.getCustomers({ lazyEvent: JSON.stringify(lazyParams.value) }).then((data) => {
+        console.log(data);
         customers.value = data.customers;
         totalRecords.value = data.totalRecords;
         loading.value = false;

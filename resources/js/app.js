@@ -1,7 +1,10 @@
 import './bootstrap';
 import '../css/app.css';
+import 'primeicons/primeicons.css'
 
 import PrimeVue from 'primevue/config';
+import Ripple from 'primevue/ripple';
+import StyleClass from 'primevue/styleclass';
 
 
 import { createApp, h } from 'vue';
@@ -23,6 +26,8 @@ createInertiaApp({
                 unstyled: true,
                 pt: lara
             })
+            .directive('ripple', Ripple)
+            .directive('styleclass', StyleClass)
             .mount(el);
     },
     progress: {
